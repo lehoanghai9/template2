@@ -55,7 +55,7 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
           <Stars amount={review.rating} />
         </div>
       </div>
-      <p className="">"{parts}"</p>
+      <p>&quot;{parts}&quot;</p>
     </div>
   )
 }
