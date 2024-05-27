@@ -5,7 +5,6 @@ import SectionHeader from './SectionHeader'
 import envelopeLottie from '@/images/lotties/envelopeLottie.json'
 import demandLottie from '@/images/lotties/demandLottie.json'
 import giftLottie from '@/images/lotties/giftLottie.json'
-import clientImage from '@/images/barry-allenjpg.jpg'
 import { useAnimate } from 'framer-motion'
 
 /* Dynamic import countering the server-side rendering issue on the lottie window object */

@@ -13,7 +13,6 @@ import { NavLinks } from '@/components/NavLinks'
 import CtaButton from './CtaButton'
 import { ArrowRightIcon } from '@heroicons/react/20/solid'
 import { navlinks } from '@/lib/constants'
-import { useInViewSection } from '@/hooks/useInViewSection'
 import useReducedNavbar from '@/hooks/useReducedNavbar'
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
