@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from 'react'
 
 export function useInViewSection() {
@@ -12,7 +13,6 @@ export function useInViewSection() {
     }
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      console.log(entries)
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setCurrentSection(entry.target.id)

@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import React from 'react'
+import { FadeIn } from './FadeIn'
 
 interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
@@ -57,7 +58,7 @@ const SectionDescription: React.FC<SectionDescriptionProps> = ({
   return (
     <p
       className={clsx(
-        'text-center md:text-[1.4rem] text-muted  md:text-lg',
+        'text-center text-muted md:text-[1.4rem]  md:text-lg',
         className,
       )}
       {...props}
@@ -79,12 +80,17 @@ const SectionHeaderWrapper: React.FC<SectionHeaderWrapperProps> = ({
   ...props
 }) => {
   return (
-    <div
-      className={clsx('flex w-full flex-col items-center gap-4 mb-12', className)}
-      {...props}
-    >
-      {children}
-    </div>
+    <FadeIn>
+      <div
+        className={clsx(
+          'mb-12 flex w-full flex-col items-center gap-4',
+          className,
+        )}
+        {...props}
+      >
+        {children}
+      </div>
+    </FadeIn>
   )
 }
 

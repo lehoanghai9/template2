@@ -8,7 +8,6 @@ import { FadeIn, FadeInStagger } from './FadeIn'
 import Link from 'next/link'
 import { Review, Stat, reviews, stats } from '@/lib/constants'
 import Image from 'next/image'
-import { StarIcon } from '@heroicons/react/20/solid'
 import logo1 from '@/images/logos/logo1.svg'
 import logo2 from '@/images/logos/logo2.svg'
 import logo3 from '@/images/logos/logo3.svg'
@@ -16,6 +15,7 @@ import logo4 from '@/images/logos/logo4.svg'
 import logo5 from '@/images/logos/logo5.svg'
 import logo6 from '@/images/logos/logo6.svg'
 import Marquee from 'react-fast-marquee'
+import Stars from './Stars'
 
 interface ReviewCardProps {
   review: Review
@@ -38,23 +38,21 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
       )
   }
   return (
-    <div className="justShadow rounded-universal w-full space-y-4 bg-white p-6">
+    <div className="justShadow w-full space-y-4 rounded-universal bg-white p-6">
       <div className="flex w-full justify-between">
         <div className="flex items-center gap-2.5">
           <Image
             src={review.image.src}
-            alt={review.clientName}
+            alt={review.author}
             width={30}
             height={30}
             className="aspect-square rounded-full object-cover"
           />
-          <h4 className="text-sm font-semibold">{review.clientName}</h4>
+          <h4 className="text-sm font-semibold">{review.author}</h4>
         </div>
 
         <div className="flex">
-          {Array.from({ length: review.stars }, (_, index) => (
-            <StarIcon className="aspect-square w-6 text-main" />
-          ))}
+          <Stars amount={review.rating} />
         </div>
       </div>
       <p className="">"{parts}"</p>
@@ -68,7 +66,7 @@ const Reviews = () => {
     <FadeIn>
       <div className="flex w-full flex-col gap-6 md:flex-row ">
         {reviewsToShow.map((review) => (
-          <ReviewCard review={review} key={review.clientName} />
+          <ReviewCard review={review} key={review.author} />
         ))}
       </div>
     </FadeIn>
@@ -118,6 +116,7 @@ const CallToAction = () => {
       <div className="flex justify-center ">
         <Link href="#pricing">
           <CtaButton
+            className="ctaShadow"
             label={<>Get started</>}
             Icon={
               <div className="relative  flex items-center justify-center rounded-full bg-white p-2.5">
@@ -133,7 +132,7 @@ const CallToAction = () => {
 
 const Title = () => {
   return (
-    <section id="hero" className="overflow-y-hidden pt-8">
+    <section id="hero" className="overflow-y-hidden pt-12">
       <FadeIn>
         <div className="flex flex-col items-center space-y-6">
           <SignatureButton Icon={SignatureLogo} label="Developed by Hai" />
@@ -202,7 +201,7 @@ const LogosMarquee = () => {
 
 const Hero = () => {
   return (
-    <section className="overflow-hidden py-12 lg:pb-32 xl:pb-36">
+    <section className="overflow-hidden py-8 lg:pb-32 xl:pb-36">
       <Container>
         <FadeInStagger>
           <div className="space-y-12">
