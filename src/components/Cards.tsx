@@ -1,5 +1,4 @@
 'use client'
-import clsx from 'clsx'
 import { FadeIn } from './FadeIn'
 import { motion } from 'framer-motion'
 /* Dynamic import countering the server-side rendering issue on the lottie window object */
@@ -27,7 +26,7 @@ export const BenefitCard: React.FC<BenefitCardProps> = ({
 }) => {
   return (
     <FadeIn>
-      <div className="justShadow group relative inline-flex w-full max-w-[320px] items-center justify-center overflow-hidden rounded-universal bg-white px-5 py-10">
+      <div className="mediumShadow group relative inline-flex w-full max-w-[320px] items-center justify-center overflow-hidden rounded-universal bg-white px-5 py-10">
         <div className="z-10 mt-10 flex flex-col items-center space-y-4">
           <motion.div
             className="aspect-square w-[60px]"
@@ -86,7 +85,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({ plan }) => {
   return (
     <FadeIn>
       <div
-        className="justShadow w-[350px] rounded-universal p-6 sm:w-[400px] md:p-8"
+        className="hardShadow w-[350px] rounded-universal p-6 sm:w-[400px] md:p-8"
         style={satoshi.style}
       >
         <div className="space-y-3">

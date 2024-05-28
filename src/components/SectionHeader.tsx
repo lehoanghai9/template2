@@ -98,7 +98,7 @@ interface SectionHeaderProps {
   className?: string
   label: string
   title: string
-  description: string
+  description?: string
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -111,7 +111,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     <SectionHeaderWrapper className={className}>
       <Badge label={label} />
       <SectionTitle title={title} />
-      <SectionDescription description={description} />
+      {description && <SectionDescription description={description} />}
     </SectionHeaderWrapper>
   )
 }

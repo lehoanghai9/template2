@@ -1,6 +1,12 @@
 import client1Image from '@/images/max-bentley.jpg'
 import client2Image from '@/images/ethan-chambers.jpg'
 import testimonialClient1Image from '@/images/barry-allenjpg.jpg'
+import testimonialClient2Image from '@/images/sarah-johnson.jpg'
+import testimonialClient3Image from '@/images/mark-thompson.jpg'
+import testimonialClient4Image from '@/images/jessica-moore.jpg'
+import testimonialClient5Image from '@/images/matthew-taylor.jpg'
+import testimonialClient6Image from '@/images/emily-thompson.jpg'
+import testimonialClient7Image from '@/images/john-smith.jpg'
 import { StaticImageData } from 'next/image'
 import service1Image from '@/images/websiteIcon.png'
 import service2Image from '@/images/logoDesignIcon.png'
@@ -73,6 +79,54 @@ export const testimonials: Testimonial[] = [
     title: 'Lightning-fast',
     comment:
       "Endless is a lifesaver! Their lightning-fast design service keeps up with my company's needs. It's like having my own design team on standby. Thanks, Endless!",
+    rating: 5,
+  },
+  {
+    image: testimonialClient2Image,
+    author: 'Sarah Johnson',
+    position: 'CEO, ProTech Inc',
+    comment:
+      'Endless has completely transformed our design process with their creativity and attention to detail',
+    rating: 5,
+  },
+  {
+    image: testimonialClient3Image,
+    author: 'Mark Thompson',
+    position: 'Director, Vision LLC',
+    comment:
+      'Working with Endless has been a game-changer. Designs are top-notch and always delivered on time.',
+    rating: 5,
+  },
+  {
+    image: testimonialClient4Image,
+    author: 'Jessica Moore',
+    position: 'CEO, SwiftTech',
+    comment:
+      'Endless has helped us elevate our visual identity and stand out in a crowded market. Highly recommend',
+    rating: 5,
+  },
+  {
+    image: testimonialClient5Image,
+    author: 'Director, Speed Inc',
+    position: 'CEO of Speed4s',
+    comment:
+      'Working with Endless is a pleasure. Responsive, professional, and deliver exceptional designs.',
+    rating: 5,
+  },
+  {
+    image: testimonialClient6Image,
+    author: 'Emily Johnson',
+    position: 'CEO of Speed4s',
+    comment:
+      "I've been blown away by The Endless. Their designs are top-notch, and the turnaround time is unbelievable.",
+    rating: 5,
+  },
+  {
+    image: testimonialClient7Image,
+    author: 'John Smith',
+    position: 'Creative Director, GlowUp',
+    comment:
+      'The quality is unmatched, and the subscription model makes it so convenient. Worth every penny!',
     rating: 5,
   },
 ]

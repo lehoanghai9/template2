@@ -8,6 +8,7 @@ import {
   XCircleIcon,
 } from '@heroicons/react/24/outline'
 import { satoshi } from '@/fonts/fonts'
+import { Testimonials } from './Testimonials'
 
 export function Pricing() {
   return (
@@ -24,7 +25,7 @@ export function Pricing() {
           ))}
         </div>
         <div
-          className="mt-12 flex flex-col md:flex-row items-center md:gap-6 justify-center gap-3 text-main"
+          className="mt-12 flex flex-col items-center justify-center gap-3 text-main md:flex-row md:gap-6"
           style={satoshi.style}
         >
           <div className="flex gap-2">
