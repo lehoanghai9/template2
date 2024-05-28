@@ -2,6 +2,12 @@ import client1Image from '@/images/max-bentley.jpg'
 import client2Image from '@/images/ethan-chambers.jpg'
 import testimonialClient1Image from '@/images/barry-allenjpg.jpg'
 import { StaticImageData } from 'next/image'
+import service1Image from '@/images/websiteIcon.png'
+import service2Image from '@/images/logoDesignIcon.png'
+import service3Image from '@/images/mobileIcon.png'
+import service4Image from '@/images/brandingIcon.png'
+import service5Image from '@/images/uiuxIcon.png'
+import service6Image from '@/images/illustrationIcon.png'
 type Navlink = [string, string]
 
 export const navlinks: Navlink[] = [
@@ -68,5 +74,50 @@ export const testimonials: Testimonial[] = [
     comment:
       "Endless is a lifesaver! Their lightning-fast design service keeps up with my company's needs. It's like having my own design team on standby. Thanks, Endless!",
     rating: 5,
+  },
+]
+
+export interface Service {
+  image: StaticImageData
+  title: string
+  description: string
+}
+
+export const services: Service[] = [
+  {
+    image: service1Image,
+    title: 'Website design',
+    description:
+      'Engaging websites tailored to your brand, blending creativity with functionality for a captivating online presence.',
+  },
+  {
+    image: service2Image,
+    title: 'Logo design',
+    description:
+      "Unique logos crafted to reflect your brand's essence, leaving a memorable mark that resonates with your audience.",
+  },
+  {
+    image: service3Image,
+    title: 'Mobile design',
+    description:
+      "Seamless mobile experiences that mirror your brand's identity, ensuring smooth performance on any device.",
+  },
+  {
+    image: service4Image,
+    title: 'Branding',
+    description:
+      'Complete brand identity solutions to establish consistency across all platforms, fostering trust and recognition.',
+  },
+  {
+    image: service5Image,
+    title: 'UI/UX Design',
+    description:
+      'Intuitive interfaces and user experiences that prioritize usability, enhancing engagement and conversion rates.',
+  },
+  {
+    image: service6Image,
+    title: 'Illustrations',
+    description:
+      'Custom visuals that add personality and enhance communication, whether for digital or print media.',
   },
 ]
