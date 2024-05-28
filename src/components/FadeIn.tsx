@@ -34,10 +34,12 @@ export function FadeIn(props: FadeInProps) {
 
 interface FadeInStaggerProps extends MotionProps {
   faster?: boolean
+  className?: string
 }
 
 export function FadeInStagger({
   faster = false,
+  className,
   ...props
 }: FadeInStaggerProps) {
   return (
@@ -47,6 +49,7 @@ export function FadeInStagger({
         whileInView="visible"
         viewport={viewport}
         transition={{ staggerChildren: faster ? 0.12 : 0.2 }}
+        className={className}
         {...props}
       />
     </FadeInStaggerContext.Provider>

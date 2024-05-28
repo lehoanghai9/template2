@@ -11,3 +11,17 @@ export function Container({
     />
   )
 }
+
+export function SectionContainer({
+  id,
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<'section'>) {
+  return (
+    <section
+      id={id}
+      className={clsx('pb-16 pt-24 md:pb-24 lg:pt-24', className)}
+      {...props}
+    />
+  )
+}
