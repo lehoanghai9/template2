@@ -1,18 +1,15 @@
 import { type Metadata } from 'next'
-import localFont from 'next/font/local'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
-
-const inter = localFont({src: "../fonts/Poppins-Variable.woff2"})
+import { poppins } from '@/fonts/fonts'
 
 export const metadata: Metadata = {
   title: {
     template: 'Template 2',
     default: 'Template 2',
   },
-  description:
-    'BLAH BLAH SOMETHING',
+  description: 'BLAH BLAH SOMETHING',
 }
 
 export default function RootLayout({
@@ -21,7 +18,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={clsx('bg-white antialiased pb-10   md:pb-16', inter.className)}>
+    <html
+      lang="en"
+      className={clsx(
+        'bg-white pb-10 antialiased   md:pb-16',
+        poppins.className,
+      )}
+    >
       <body>{children}</body>
     </html>
   )

@@ -121,3 +121,99 @@ export const services: Service[] = [
       'Custom visuals that add personality and enhance communication, whether for digital or print media.',
   },
 ]
+
+interface PlanFeature {
+  title: string
+  available: boolean
+}
+
+export interface Plan {
+  featured: boolean
+  name: string
+  monthlyPrice: number
+  description: string
+  features: PlanFeature[]
+}
+
+export const plans: Plan[] = [
+  {
+    featured: false,
+    name: 'Standard',
+    monthlyPrice: 2995,
+    description: 'Perfect for starters and small teams.',
+    features: [
+      {
+        title: 'Unlimited requests',
+        available: true,
+      },
+      {
+        title: 'One request at a time',
+        available: true,
+      },
+      {
+        title: '2-days delivery',
+        available: true,
+      },
+      {
+        title: 'Unlimited revisions',
+        available: true,
+      },
+      {
+        title: 'Framer development',
+        available: false,
+      },
+      {
+        title: 'Weekly calls',
+        available: false,
+      },
+      {
+        title: 'Dashboard Access',
+        available: false,
+      },
+      {
+        title: 'Unlimited stock photos',
+        available: false,
+      },
+    ],
+  },
+  {
+    featured: true,
+    name: 'Premium',
+    monthlyPrice: 5995,
+    description: 'Exclusive and advanced features.',
+    features: [
+      {
+        title: 'Unlimited requests',
+        available: true,
+      },
+      {
+        title: '2 request at a time',
+        available: true,
+      },
+      {
+        title: 'Same day delivery',
+        available: true,
+      },
+      {
+        title: 'Unlimited revisions',
+        available: true,
+      },
+      {
+        title: 'Framer development',
+        available: true,
+      },
+      {
+        title: 'Weekly calls',
+        available: true,
+      },
+      {
+        title: 'Dashboard Access',
+        available: true,
+      },
+      {
+        title: 'Unlimited stock photos',
+        available: true,
+      },
+    ],
+  },
+]
