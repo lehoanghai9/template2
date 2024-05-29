@@ -19,6 +19,7 @@ export function Footer() {
             <div className="flex flex-col gap-6 md:flex-row md:gap-10">
               {navlinks.map(([link, href]) => (
                 <Link
+                  key={link}
                   href={href}
                   className="text-center  text-muted duration-200 hover:text-main"
                 >

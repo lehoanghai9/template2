@@ -20,7 +20,7 @@ const MissingSomething = () => {
             />
           </div>
           <h3 className="pt-6 text-center text-2xl font-semibold">
-            Can't find what you're looking for?
+            Can&apos;t find what you&apos;re looking for?
           </h3>
           <div className="pt-6">
             <CtaButton
