@@ -337,3 +337,5 @@ export const socialMediaLinks: SocialMedia[] = [
     Icon: InstagramLogo,
   },
 ]
+
+export const signatureLink: string = "https://github.com/lehoanghai9"

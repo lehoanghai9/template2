@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container'
 import { LogoWithTitle } from '@/components/Logo'
-import { navlinks, socialMediaLinks } from '@/lib/constants'
+import { navlinks, signatureLink, socialMediaLinks } from '@/lib/constants'
 import Link from 'next/link'
 import { SignatureButton, SocialButton } from './SignatureButton'
 import { GithubLogo } from '@/components/Logo'
@@ -44,17 +44,16 @@ export function Footer() {
             </p>
             <div className="flex flex-col items-center gap-2 md:flex-row md:justify-center md:gap-6">
               <SignatureButton className="text-sm" />
-              <Link href="https://x.com/arunspacek">
-                <SignatureButton
-                  className="text-sm"
-                  label="Designed by Arun K"
-                />
-              </Link>
+              <SignatureButton
+                href="https://x.com/arunspacek"
+                className="text-sm"
+                label="Designed by Arun K"
+              />
             </div>
           </div>
         </div>
         <div className="flex flex-col items-center pt-8 md:flex-row-reverse md:justify-between md:pt-6">
-          <div className='flex gap-4'>
+          <div className="flex gap-4">
             {socialMediaLinks.map((social) => (
               <SocialButton
                 Icon={social.Icon}
