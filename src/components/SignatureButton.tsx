@@ -1,10 +1,11 @@
 import clsx from 'clsx'
+import Link from 'next/link'
 
 interface SignatureButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   label?: string
-  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+  Icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
 }
 
 export const SignatureButton: React.FC<SignatureButtonProps> = ({
@@ -21,8 +22,29 @@ export const SignatureButton: React.FC<SignatureButtonProps> = ({
       )}
       {...props}
     >
-      <Icon className="stroke-black group-hover:stroke-main" />
+      {Icon && <Icon className="stroke-black group-hover:stroke-main" />}
       {label ? label : 'Developed by Hai'}
     </button>
+  )
+}
+
+interface SocialButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  href: string
+  className?: string
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+}
+
+export const SocialButton: React.FC<SocialButtonProps> = ({
+  href,
+  className,
+  Icon,
+}) => {
+  return (
+    <Link href={href} target='_blank'>
+      <button className={clsx("hardShadow flex items-center justify-center hover:scale-125 transition-all duration-200 rounded-full p-4", className)}>
+        <Icon className="aspect-square w-6" />
+      </button>
+    </Link>
   )
 }

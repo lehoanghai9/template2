@@ -1,5 +1,5 @@
 import Benefits from '@/components/Benefits'
-import Faq from '@/components/Faq'
+import Faqs from '@/components/Faq'
 import Hero from '@/components/Hero'
 import { Pricing } from '@/components/Pricing'
 import Process from '@/components/Process'
@@ -15,7 +15,7 @@ export default function Home() {
       <Services />
       <Pricing />
       <Testimonials />
-      <Faq />
+      <Faqs />
       {/* <PrimaryFeatures />
       <SecondaryFeatures />
       <CallToAction />

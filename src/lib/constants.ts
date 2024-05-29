@@ -14,6 +14,10 @@ import service3Image from '@/images/mobileIcon.png'
 import service4Image from '@/images/brandingIcon.png'
 import service5Image from '@/images/uiuxIcon.png'
 import service6Image from '@/images/illustrationIcon.png'
+import { GithubLogo } from '@/components/Logo'
+import { FacebookLogo } from '@/components/Logo'
+import { InstagramLogo } from '@/components/Logo'
+
 type Navlink = [string, string]
 
 export const navlinks: Navlink[] = [
@@ -269,5 +273,67 @@ export const plans: Plan[] = [
         available: true,
       },
     ],
+  },
+]
+
+export interface Faq {
+  question: string
+  answer: string
+}
+
+export const faqs: Faq[] = [
+  {
+    question: 'How many design requests can I make?',
+    answer:
+      'With your subscription, you have unlimited design requests. You can submit as many design projects as you need, and our team will work on them based on your priority and our workload.',
+  },
+  {
+    question: 'What is the turnaround time for design requests?',
+    answer:
+      'Our standard turnaround time for design requests is 2 days, but this may vary depending on the complexity of the project and our current workload. Rest assured, we strive to deliver high-quality designs within a reasonable timeframe.',
+  },
+  {
+    question: 'Can I request revisions to my designs?',
+    answer:
+      "Yes, we offer revisions for all design requests to ensure your satisfaction. After receiving the initial design draft, you can provide feedback and request any necessary revisions. We'll work closely with you to make sure the final design meets your expectations.",
+  },
+  {
+    question: 'What types of designs do you offer?',
+    answer:
+      "We offer a wide range of design services, including but not limited to: Logo design, Branding and identity, Website design Marketing materials (flyers, brochures, posters), Social media graphics, Packaging design, And much more! If you have a specific design need, feel free to reach out, and we'll do our best to accommodate it.",
+  },
+  {
+    question: 'Do you offer refunds?',
+    answer:
+      "We offer a 30-day refund policy, if applicable] refund policy. If you're unsatisfied with our service for any reason, please reach out to our support team, and we'll do our best to address your concerns.",
+  },
+  {
+    question: 'How can I contact your support team?',
+    answer:
+      "You can contact our support team via email at support@example.com or by phone at +123456789. We're here to assist you with any questions or issues you may have, so don't hesitate to reach out!",
+  },
+]
+
+export interface SocialMedia {
+  type: string
+  href: string
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+}
+
+export const socialMediaLinks: SocialMedia[] = [
+  {
+    type: 'Github',
+    href: 'https://github.com/lehoanghai9',
+    Icon: GithubLogo,
+  },
+  {
+    type: 'Facebook',
+    href: 'https://www.facebook.com/hai.lehoanghai/',
+    Icon: FacebookLogo,
+  },
+  {
+    type: 'Instagram',
+    href: 'https://www.instagram.com/_lehoanghai/',
+    Icon: InstagramLogo,
   },
 ]

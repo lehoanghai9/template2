@@ -19,7 +19,7 @@ const CtaButton = ({ className, label, Icon }: CtaButtonProps) => {
       )}
     >
       <span
-        className={`absolute right-0 z-0 h-9 w-9  rounded-full bg-black opacity-0 transition-all duration-[500ms] ease-in-out group-hover:h-[46px] group-hover:w-[165px] group-hover:opacity-100`}
+        className={`absolute right-0 z-0 h-9 w-9  rounded-full bg-black opacity-0 transition-all duration-[500ms] ease-in-out group-hover:h-[46px] group-hover:w-[200px] group-hover:opacity-100`}
       />
       <h4 className="z-10">{label}</h4>
       {Icon && Icon}

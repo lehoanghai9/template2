@@ -1,8 +1,6 @@
 'use client'
 import { FadeIn } from './FadeIn'
 import { motion } from 'framer-motion'
-/* Dynamic import countering the server-side rendering issue on the lottie window object */
-import dynamic from 'next/dynamic'
 import { satoshi } from '@/fonts/fonts'
 import {
   ArrowRightIcon,
@@ -11,6 +9,8 @@ import {
 } from '@heroicons/react/24/outline'
 import { Plan } from '@/lib/constants'
 import { formatPrice } from '@/lib/utils'
+/* Dynamic import countering the server-side rendering issue on the lottie window object */
+import dynamic from 'next/dynamic'
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false })
 
 interface BenefitCardProps {
